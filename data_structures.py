@@ -59,4 +59,74 @@ type(x)
 #Not: Liste, tuple, set ve dictionary veri yapıları aynı zamanda Python Collections (Arrays) olarak geçmektedir.
 
 
+#########################################
+# Sayılar (Numbers): int, float, complex
+#########################################
+
+a=5
+b=10.5
+
+a*3
+a/7
+
+
+#########################################
+# Tipleri değiştirmek
+#########################################
+
+int(b)
+float(a)
+
+
+#########################################
+# karakter dizileri (Strings)
+#########################################
+
+print("Hello ai era")
+
+name="Peter"
+print(name)
+
+long_str="""    Hello ai era    """
+print(long_str)
+
+name[0]
+
+#########################################
+# karakter dizilerinde slice işlemi
+#########################################
+
+name[0:3]
+long_str[0:3]
+
+#########################################
+# string içerisinde karakter sorgulama
+#########################################
+
+
+"veri" in long_str
+"Veri" in long_str
+
+
+#########################################
+# String (karakter dizisi) metodları
+#########################################
+
+dir(long_str)
+
+#########################################
+# len() metodu
+#########################################
+
+name = "ilker"
+print(type(name))
+print(type(len))
+print(len(name))
+
+#########################################
+# upper() & lower(): küçük-büyük dönüşümleri
+#########################################
+
+print("ilker".upper())
+print("ilker".lower())
 
