@@ -130,3 +130,31 @@ print(len(name))
 print("ilker".upper())
 print("ilker".lower())
 
+
+#########################################
+# replace: karakter değiştirir
+#########################################
+
+merhaba = "merhaba ilker"
+print(merhaba.replace("a", "b"))
+
+#########################################
+# split: karakter dizisini bölüyor
+#########################################
+
+print("Hello ai era".split())
+
+#########################################
+# strip: karakter dizisini kırpar
+#########################################
+
+print("ofofofo".strip("o"))
+
+
+#########################################
+# capitalize: ilk karakteri büyük yapar
+#########################################
+print("deniz".capitalize())
+
+
+
