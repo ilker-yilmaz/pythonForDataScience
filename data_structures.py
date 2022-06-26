@@ -157,4 +157,56 @@ print("ofofofo".strip("o"))
 print("deniz".capitalize())
 
 
+#########################################
+# Liste (list)
+#########################################
+
+# Değiştirilebilir (mutable)
+# Sıralıdır, Index işlemleri yapılabilir.
+# Kapsayıcıdır.
+
+notes = ["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"]
+print(notes)
+print(type(notes))
+
+surnames = ["Kılıç", "derin", "yılmaz", "kaya"]
+print(surnames)
+
+not_nam = [1,2,3,"a","b",True,[1,2,3]]
+
+not_nam[0] = "C"
+print(not_nam[0])
+print(not_nam[-1])
+print(not_nam[-2])
+print(not_nam[6][1])
+
+print("listede 0'dan 3'e kadar olan elemanlar: ", not_nam[0:3])
+
+#########################################
+# Liste Metodları (list methods)
+#########################################
+
+print(dir(notes))
+
+#########################################
+# append: listeye eleman ekler
+#########################################
+
+notes.append("D#")
+print(notes)
+
+#########################################
+# pop : index'e göre liste elemanını siler
+#########################################
+
+notes.pop(0)
+print(notes)
+
+#########################################
+# insert: belirli bir index'e göre listeye eleman ekler
+#########################################
+
+notes.insert(3, 10)
+print(notes)
+
 
