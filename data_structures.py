@@ -305,4 +305,66 @@ my_tuple = tuple(my_tuple_list) # listeyi tuple'a çevirme
 
 print(my_tuple)
 
+#########################################
+# Set
+#########################################
 
+# - Değiştirilebilir.
+# - Sırasız + Eşsizdir.
+# - Kapsayıcıdır.
+
+
+#########################################
+# difference() : farklılıkları bulma
+#########################################
+
+set1=set([1,2,3,4,5,6,7,8,9,10])
+set2=set([1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20])
+
+#set1'de olup set2'de olmayanları bulma
+print(set1.difference(set2))
+
+#set2'de olup set1'de olmayanları bulma
+print(set2.difference(set1))
+
+#########################################
+# symetric_difference() : iki kümede de birbirlerine göre olmayanlar
+#########################################
+
+print(set1.symmetric_difference(set2))
+print(set2.symmetric_difference(set1))
+
+#########################################
+# intersection() : (iki kümenin kesişimi)
+#########################################
+
+print(set1.intersection(set2))
+print(set2.intersection(set1))
+
+#########################################
+# union() : (iki kümenin birleşimi)
+#########################################
+
+print(set1.union(set2))
+print(set2.union(set1))
+
+#########################################
+# isdisjoint() : (iki kümenin kesişimi boş mu?)
+#########################################
+
+print(set1.isdisjoint(set2))
+print(set2.isdisjoint(set1))
+
+#########################################
+# issubset() : (bir küme diğer kümenin alt kümesi mi?)
+#########################################
+
+print(set1.issubset(set2))
+print(set2.issubset(set1))
+
+#########################################
+# issuperset() : (bir küme diğer kümeyi kapsıyor mu?)
+#########################################
+
+print(set1.issuperset(set2))
+print(set2.issuperset(set1))
