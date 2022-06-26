@@ -210,3 +210,99 @@ notes.insert(3, 10)
 print(notes)
 
 
+#########################################
+# Sözlük ( dictionary )
+#########################################
+
+# sözlükler key value şeklindedir.
+# key'leri unique olmalıdır.
+# value'leri değiştirilebilir.
+# değiştirilebilirdir
+# sırasızdır.
+# kapsayıcıdır.
+
+#key-value
+dictionary = {"name":"ilker",
+              "age":21,
+              "city":"İstanbul",
+              "country":"Türkiye"}
+
+print(dictionary)
+
+print(dictionary["name"])
+
+#########################################
+# key sorgulama
+#########################################
+
+print("name" in dictionary)
+
+#########################################
+# Key'e Göre Value'ya Erişmek
+#########################################
+
+print(dictionary.get("name"), dictionary.get("age"))
+
+#########################################
+# Value Değiştirme
+#########################################
+
+dictionary["age"] = 22
+print(dictionary["age"])
+
+#########################################
+# tüm key'lere erişmek
+#########################################
+
+print(dictionary.keys())
+
+#########################################
+# tüm value'lara erişmek
+#########################################
+
+print(dictionary.values())
+
+#########################################
+# tüm çiftleri tuple halinde listeye çevirme
+#########################################
+
+print(dictionary.items())
+
+#########################################
+# key-value değerini güncelleme
+#########################################
+
+dictionary.update({"age":23})
+print(dictionary)
+
+dictionary.update({"age":24, "city":"Ankara"})
+print(dictionary)
+
+dictionary.update({"yeniKey":"yeniValue"})
+print(dictionary)
+
+#########################################
+# Demet (Tuple)
+#########################################
+
+# Tuple, listelerin değişime kapalı kardeşidir, biraz daha aksidir :)
+# Değiştirilemez,
+# sıralıdır (yani bu veri yapısının elemanlarına erişilebiliyor anlamına gelir),
+# kapsayıcıdır (farklı veri yapılarını saklayabilir anlamına gelmektedir.)
+
+my_tuple = ("ilker", 1, "yılmaz", 5.5)
+print(my_tuple)
+
+print(my_tuple[0])
+print(my_tuple[0:3])    # 0'dan 3'e kadar olan elemanlar
+#my_tuple[0] = 100       # tuple'ın elemanlarını değiştiremezsiniz...
+
+#tuple güncelleme yöntemi
+
+my_tuple_list = list(my_tuple) # tuple'ı listeye çevirme
+my_tuple_list[0] = 100 # liste elemanını değiştirme
+my_tuple = tuple(my_tuple_list) # listeyi tuple'a çevirme
+
+print(my_tuple)
+
+
