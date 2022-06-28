@@ -323,3 +323,32 @@ def alternating(string):
 mulakatcevabi = alternating("hi my name is john and i am learning python")
 
 print(mulakatcevabi)
+
+##########################
+# break & continue & while
+##########################
+
+salaries = [1000, 2000, 3000, 4000, 5000]
+
+# break: döngüden çık
+# continue: döngüden sonraki adımı atla
+
+for salary in salaries:
+    if salary >= 3000:
+        break
+    print(salary)
+
+for salary in salaries:
+    if salary == 3000:
+        continue
+    print(salary)
+
+
+# while: döngü
+number = 1
+while number <= 10:
+    print(number)
+    number += 1
+
+
+
