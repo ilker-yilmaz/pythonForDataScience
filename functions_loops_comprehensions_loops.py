@@ -260,3 +260,39 @@ def number_check(number):
 
 
 print(number_check(1))
+
+##################
+# Döngüler (LOOPS)
+##################
+
+# for loop
+students = ["ilker", "fırat", "mehmet", "ahmet", "resul", "furkan", "gaffar"]
+for student in students:
+    print(student)
+
+for student in students:
+    print(student.upper())
+
+salaries = [1000, 2000, 3000, 4000, 5000]
+for salary in salaries:
+    print(salary)
+
+for salary in salaries:
+    print((salary * 20)/100 + salary)
+
+
+def new_salary(salary,rate):
+    return int((salary * rate)/100 + salary)
+
+
+print(new_salary(1000,20))
+
+for salary in salaries:
+    print(new_salary(salary,20))
+
+
+for salary in salaries:
+    if salary >= 3000:
+        print(new_salary(salary,10))
+    else:
+        print(new_salary(salary,20))
