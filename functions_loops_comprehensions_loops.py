@@ -278,21 +278,48 @@ for salary in salaries:
     print(salary)
 
 for salary in salaries:
-    print((salary * 20)/100 + salary)
+    print((salary * 20) / 100 + salary)
 
 
-def new_salary(salary,rate):
-    return int((salary * rate)/100 + salary)
+def new_salary(salary, rate):
+    return int((salary * rate) / 100 + salary)
 
 
-print(new_salary(1000,20))
+print(new_salary(1000, 20))
 
 for salary in salaries:
-    print(new_salary(salary,20))
-
+    print(new_salary(salary, 20))
 
 for salary in salaries:
     if salary >= 3000:
-        print(new_salary(salary,10))
+        print(new_salary(salary, 10))
     else:
-        print(new_salary(salary,20))
+        print(new_salary(salary, 20))
+
+###########################
+# Uygulama - Mülakat Sorusu
+###########################
+
+# Amaç: Aşağıdaki şekilde string değiştiren fonksiyon yazmak istiyoruz
+
+# before: "hi my name is john and i am learning python"
+# after: "Hi mY NaMe iS JoHn aNd i aM LeArNiNg pYtHoN"
+
+# aslında anlatılmak istenen şey:
+# tek indekstekileri küçük harflerle değiştir
+# çift indekstekileri büyük harflerle değiştir
+
+def alternating(string):
+    new_string = ""
+    # girilen string'in index'lerinde gez.
+    for i in range(len(string)): # string'in uzunluğu kadar döngü oluştur
+        if i % 2 == 0: # eğer indeksteki sayı çift ise
+            new_string += string[i].upper() # çift indeksteki sayıyı büyük harfe çevir
+        else:
+            new_string += string[i].lower() # tek indeksteki sayıyı küçük harfe çevir
+    return new_string
+
+
+mulakatcevabi = alternating("hi my name is john and i am learning python")
+
+print(mulakatcevabi)
