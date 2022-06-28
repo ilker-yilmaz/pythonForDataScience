@@ -40,6 +40,7 @@ def calculate_age_2(name, year):
 
 print(calculate_age_2("ilker", 2000))
 
+
 ############################
 # Docstring (Documentation String)
 #############################
@@ -60,6 +61,7 @@ def summer(arg1, arg2):
     """
     return arg1 + arg2
 
+
 print(help(summer))
 
 
@@ -76,6 +78,7 @@ def say_hello(string):
     print("Hi")
     print(string)
 
+
 say_hello("ilker")
 
 
@@ -86,11 +89,10 @@ def multiplication(arg1, arg2):
 
 multiplication(2, 3)
 
-
-
-#girilen değerleri bir liste içinde saklayacak fonksiyon
+# girilen değerleri bir liste içinde saklayacak fonksiyon
 
 liste = []
+
 
 def list_creator(arg1, arg2):
     for i in range(arg1, arg2):
@@ -101,3 +103,71 @@ def list_creator(arg1, arg2):
 
 
 list_creator(1, 10)
+
+
+###################################################################
+# Ön Tanımlı Argümanlar/Parametreler (Default Arguments/Parameters)
+###################################################################
+
+def divide(arg1, arg2):
+    return arg1 / arg2
+
+
+print(divide(10, 2))
+
+
+def divide1(arg1, arg2=1):
+    return arg1 / arg2
+
+
+print(divide1(10))
+print(divide1(10, 3))
+
+
+############################################
+# Ne zaman fonksiyon Yazma ihtiyacımız olur?
+############################################
+
+# Don't Repeat Yourself (DRY)
+# Kendini tekrar etme..
+
+def calculate_age(varm, moisture, charge):
+    print((varm + moisture) / charge)
+
+
+calculate_age(10, 20, 30)
+
+
+######################################################
+# Return: Fonksiyon Çıktılarını Girdi Olarak Kullanmak
+######################################################
+
+def calculate(varm, moisture, charge):
+    print((varm + moisture) / charge)
+
+
+# calculate(76,100,67) * 10
+
+
+def calculate(varm, moisture, charge):
+    return (varm + moisture) / charge
+
+
+a = calculate(76, 100, 67) * 10
+print(a)
+
+
+def calculate(varm, moisture, charge):
+    varm = varm * 2
+    moisture = moisture * 2
+    charge = charge * 2
+    output = (varm + moisture) / charge
+
+    return varm, moisture, charge, output
+
+
+type(calculate(76, 100, 67))
+varm, moisture, charge, output = calculate(76, 100, 67)
+
+print(varm, moisture, charge, output)
+
