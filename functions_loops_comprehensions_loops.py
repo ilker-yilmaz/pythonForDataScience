@@ -63,3 +63,41 @@ def summer(arg1, arg2):
 print(help(summer))
 
 
+######################################
+# Fonksiyonların Statement/Body Bölümü
+######################################
+
+# def fonksiyon_adi(arg1, arg2):
+#     statements (function body)
+
+
+def say_hello(string):
+    print("Hello")
+    print("Hi")
+    print(string)
+
+say_hello("ilker")
+
+
+def multiplication(arg1, arg2):
+    c = arg1 * arg2
+    print(c)
+
+
+multiplication(2, 3)
+
+
+
+#girilen değerleri bir liste içinde saklayacak fonksiyon
+
+liste = []
+
+def list_creator(arg1, arg2):
+    for i in range(arg1, arg2):
+        print(i)
+        liste.append(i)
+        print(liste)
+    return liste
+
+
+list_creator(1, 10)
