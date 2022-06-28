@@ -213,4 +213,50 @@ def add_element(a, b):
 
 add_element(10, 20)
 
+#######################
+# Koşullar (Conditions)
+#######################
 
+# True-False'u Hatırlayalım.
+1 == 1
+2 == 2
+
+# if
+if 1 == 1:
+    print("1 == 1")
+
+# elif
+if 1 == 2:
+    print("1 == 2")
+elif 1 == 1:
+    print("1 == 1")
+
+# else
+if 1 == 2:
+    print("1 == 2")
+else:
+    print("1 != 2")
+
+# if-else-if-else
+if 1 == 1:
+    print("1 == 1")
+elif 1 == 2:
+    print("1 == 2")
+elif 1 == 3:
+    print("1 == 3")
+else:
+    print("1 != 1, 2 veya 3")
+
+
+def number_check(number):
+    if number == 1:
+        print("1")
+    elif number == 2:
+        print("2")
+    elif number == 3:
+        print("3")
+    else:
+        print("1, 2 veya 3 değil")
+
+
+print(number_check(1))
