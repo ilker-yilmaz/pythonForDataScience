@@ -350,5 +350,31 @@ while number <= 10:
     print(number)
     number += 1
 
+##################################################
+# Enumerate: Otomatik Counter/Indexer ile for loop
+##################################################
+
+students = ["ilker", "fırat", "mehmet", "ahmet", "resul", "furkan", "gaffar"]
+
+for student in students:
+    print(student)
+
+
+for index, student in enumerate(students):
+    print(index, ":" ,student)
+
+#çift indexteki öğrencileri bir listeye, tek indexteki öğrencileri başka bir listeye alalım
+
+A = []
+B = []
+
+for index, student in enumerate(students):
+    if index % 2 == 0:
+        A.append(student)
+    else:
+        B.append(student)
+
+print(A)
+print(B)
 
 
