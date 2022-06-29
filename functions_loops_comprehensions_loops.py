@@ -546,7 +546,6 @@ dictionary.items()
 
 {k.upper(): v ** 2 for (k, v) in dictionary.items()}
 
-
 ###########################
 # Uygulama - Mülakat Sorusu
 ###########################
@@ -563,5 +562,28 @@ for n in numbers:
 
 print(new_dict)
 
-#diğer çözümü:
+# diğer çözümü:
 {n: n ** 2 for n in numbers if n % 2 == 0}
+
+#########################################
+# List & Dict Comprehension - Uygulamalar
+#########################################
+
+####################################################
+# Bir Veri Setindeki Değişken İsimlerini Değiştirmek
+####################################################
+
+# before:
+# ['total', 'speeding', 'alcohol', 'not__previous', 'ins_premium', 'ins_losses', 'abbrev']
+
+# after:
+# ['TOTAL', 'SPEEDING', 'ALCOHOL', 'NOT__PREVIOUS', 'INS_PREMIUM', 'INS_LOSSES', 'ABBREV']
+
+
+import seaborn as sns
+
+df = sns.load_dataset("car_crashes")
+print(df.columns)
+
+df.columns = [col.upper() for col in df.columns]
+print(df.columns)
