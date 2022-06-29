@@ -397,4 +397,22 @@ def divide_students(students):
             groups[1].append(student)
     return groups
 
+
 print(divide_students(students))
+
+###################################################
+# alternating fonksiyonunun enumerate ile yazılması
+###################################################
+
+def alternating_with_enumerate(string):
+    new_string = ""
+    for index, letter in enumerate(string):
+        if index % 2 == 0:
+            new_string += letter.upper()
+        else:
+            new_string += letter.lower()
+    return new_string
+
+
+print(alternating_with_enumerate("hi my name is john and i am learning python"))
+
