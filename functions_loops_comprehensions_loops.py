@@ -417,7 +417,6 @@ def alternating_with_enumerate(string):
 
 print(alternating_with_enumerate("hi my name is john and i am learning python"))
 
-
 #####
 # Zip
 #####
@@ -428,3 +427,50 @@ ages = [20, 21, 22, 23, 24, 25, 26]
 
 a = list(zip(students, departments, ages))
 print(a)
+
+
+#############################
+# lambda, map, filter, reduce
+#############################
+
+def summery(a, b):
+    return a + b
+
+
+summer(1, 2) * 9
+
+new_sum = lambda a, b: a + b
+
+print(new_sum(1, 2))
+
+# map
+salaries = [1000, 2000, 3000, 4000, 5000]
+
+
+def new_salary(salary):
+    return int((salary * 20) / 100 + salary)
+
+
+print(new_salary(1000))
+
+for salary in salaries:
+    print(new_salary(salary))
+
+print(list(map(new_salary, salaries)))
+
+print(list(map(lambda x: x * 30 / 100 + x, salaries)))
+
+print(list(map(lambda x: x ** 2, salaries)))
+
+# filter
+
+list_store = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+print(list(filter(lambda x: x % 2 == 0, list_store)))
+
+# reduce
+from functools import reduce
+
+list_store = [1, 2, 3, 4]
+reduce(lambda a, b: a + b, list_store)
+
