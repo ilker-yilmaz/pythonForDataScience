@@ -474,7 +474,6 @@ from functools import reduce
 list_store = [1, 2, 3, 4]
 reduce(lambda a, b: a + b, list_store)
 
-
 ###############
 # Comprehension
 ###############
@@ -505,10 +504,8 @@ for salary in salaries:
     else:
         null_list.append(new_salary(salary * 2))
 
-
 # list comprehension ile:
 [new_salary(salary * 2) if salary < 3000 else new_salary(salary) for salary in salaries]
-
 
 # örnek: salaries listesindeki her bir maaşı 2 ile çarmap istediğimizi düşünelim
 
@@ -520,24 +517,31 @@ for salary in salaries:
 
 [new_salary(salary * 2) if salary < 3000 else new_salary(salary * 0) for salary in salaries]
 
-
 students = ["ahmet", "resul", "furkan", "gaffar"]
 
 students_no = ["ilker", "fırat", "resul", ]
 
-
-yeni_liste =[student.lower() if student in students_no else student.upper() for student in students]
+yeni_liste = [student.lower() if student in students_no else student.upper() for student in students]
 
 print(yeni_liste)
 
 [student.upper() if student not in students_no else student.lower() for student in students]
 
+####################
+# Dict Comprehension
+####################
 
+dictionary = {'a': 1,
+              'b': 2,
+              'c': 3,
+              'd': 4, }
 
+dictionary.keys()
+dictionary.values()
+dictionary.items()
 
+{k: v ** 2 for (k, v) in dictionary.items()}
 
+{k.upper(): v for (k, v) in dictionary.items()}
 
-
-
-
-
+{k.upper(): v ** 2 for (k, v) in dictionary.items()}
