@@ -296,6 +296,7 @@ for salary in salaries:
     else:
         print(new_salary(salary, 20))
 
+
 ###########################
 # Uygulama - Mülakat Sorusu
 ###########################
@@ -312,11 +313,11 @@ for salary in salaries:
 def alternating(string):
     new_string = ""
     # girilen string'in index'lerinde gez.
-    for i in range(len(string)): # string'in uzunluğu kadar döngü oluştur
-        if i % 2 == 0: # eğer indeksteki sayı çift ise
-            new_string += string[i].upper() # çift indeksteki sayıyı büyük harfe çevir
+    for i in range(len(string)):  # string'in uzunluğu kadar döngü oluştur
+        if i % 2 == 0:  # eğer indeksteki sayı çift ise
+            new_string += string[i].upper()  # çift indeksteki sayıyı büyük harfe çevir
         else:
-            new_string += string[i].lower() # tek indeksteki sayıyı küçük harfe çevir
+            new_string += string[i].lower()  # tek indeksteki sayıyı küçük harfe çevir
     return new_string
 
 
@@ -343,7 +344,6 @@ for salary in salaries:
         continue
     print(salary)
 
-
 # while: döngü
 number = 1
 while number <= 10:
@@ -359,11 +359,10 @@ students = ["ilker", "fırat", "mehmet", "ahmet", "resul", "furkan", "gaffar"]
 for student in students:
     print(student)
 
-
 for index, student in enumerate(students):
-    print(index, ":" ,student)
+    print(index, ":", student)
 
-#çift indexteki öğrencileri bir listeye, tek indexteki öğrencileri başka bir listeye alalım
+# çift indexteki öğrencileri bir listeye, tek indexteki öğrencileri başka bir listeye alalım
 
 A = []
 B = []
@@ -388,6 +387,7 @@ print(B)
 tek_liste = []
 cift_liste = []
 
+
 def divide_students(students):
     groups = [[], []]
     for index, student in enumerate(students):
@@ -399,6 +399,7 @@ def divide_students(students):
 
 
 print(divide_students(students))
+
 
 ###################################################
 # alternating fonksiyonunun enumerate ile yazılması
@@ -416,3 +417,14 @@ def alternating_with_enumerate(string):
 
 print(alternating_with_enumerate("hi my name is john and i am learning python"))
 
+
+#####
+# Zip
+#####
+
+students = ["ilker", "fırat", "mehmet", "ahmet", "resul", "furkan", "gaffar"]
+departments = ["computer science", "math", "physics", "chemistry", "biology", "history", "geography"]
+ages = [20, 21, 22, 23, 24, 25, 26]
+
+a = list(zip(students, departments, ages))
+print(a)
