@@ -587,3 +587,38 @@ print(df.columns)
 
 df.columns = [col.upper() for col in df.columns]
 print(df.columns)
+
+
+####################################################
+# İsminde "INS" olan değişkenlerin başına FLAG diğerlerine NO_FLAG eklemek istiyoruz.
+####################################################
+
+# before:
+# ['total',
+# 'speeding',
+# 'alcohol',
+# 'not_distracted',
+# 'no_previous',
+# 'ins_premium',
+# 'ins_losses',
+# 'abbrev'],
+
+# after:
+# ['NO_FLAG_TOTAL',
+# 'NO_FLAG_SPEEDING',
+# 'NO_FLAG_ALCOHOL',
+# 'NO_FLAG_NOT_DISTRACTED',
+# 'NO_FLAG_NO_PREVIOUS',
+# 'FLAG_INS_PREMIUM',
+# 'FLAG_INS_LOSSES',
+# 'NO_FLAG_ABBREV'],
+
+INS_iceren_liste = [col for col in df.columns if "INS" in col]
+
+flag_liste= ["FLAG_" + col for col in df.columns if "INS" in col]
+
+flag_ve_no_flag_liste = ["FLAG_" + col if "INS" in col else "NO_FLAG_" + col for col in df.columns]
+
+print(INS_iceren_liste)
+print(flag_liste)
+print(flag_ve_no_flag_liste)
