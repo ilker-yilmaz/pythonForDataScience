@@ -545,3 +545,23 @@ dictionary.items()
 {k.upper(): v for (k, v) in dictionary.items()}
 
 {k.upper(): v ** 2 for (k, v) in dictionary.items()}
+
+
+###########################
+# Uygulama - Mülakat Sorusu
+###########################
+
+# Amaç: çift sayıların karesi alınarak bir sözlüğe eklenmek istenmektedir
+# Key'ler orijinal değerler, value'ler ise karesi olmalı.
+
+numbers = range(10)
+new_dict = {}
+
+for n in numbers:
+    if n % 2 == 0:
+        new_dict[n] = n ** 2
+
+print(new_dict)
+
+#diğer çözümü:
+{n: n ** 2 for n in numbers if n % 2 == 0}
