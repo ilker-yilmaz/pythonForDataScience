@@ -622,3 +622,47 @@ flag_ve_no_flag_liste = ["FLAG_" + col if "INS" in col else "NO_FLAG_" + col for
 print(INS_iceren_liste)
 print(flag_liste)
 print(flag_ve_no_flag_liste)
+
+
+####################################################
+# Amaç key'i string, value'su aşağıdaki gibi bir liste olan sözlük oluşturmak
+# sadece sayısal değişkenler için yapmak istiyoruz
+####################################################
+
+# Output:
+#  {'total': ['mean','min','max','var'],
+#     'speeding': ['mean','min','max','var'],
+#     'alcohol': ['mean','min','max','var'],
+#   'not_distracted': ['mean','min','max','var'],
+#     'not_previous': ['mean','min','max','var'],
+#     'ins_premium': ['mean','min','max','var'],
+#     'ins_losses': ['mean','min','max','var'],
+#   }
+
+
+import seaborn as sns
+
+df = sns.load_dataset("car_crashes")
+print(df.columns)
+
+num_cols = [col for col in df.columns if df[col].dtype != "O"]
+
+print(num_cols)
+
+soz = {}
+
+agg_list = ['mean', 'min', 'max', 'sum']
+
+for col in num_cols:
+    soz[col] = agg_list
+
+print(soz)
+
+# kısa yol:
+soz2 = {col: ['mean', 'min', 'max', 'sum'] for col in num_cols}
+print(soz2)
+
+df[num_cols].head()
+
+df[num_cols].agg(soz2)
+
