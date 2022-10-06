@@ -71,4 +71,45 @@ print("titanic['embark_town'].value_counts()",titanic["embark_town"].value_count
 #################################################
 # Pandas'ta Seçim İşlemleri (Selection in Pandas)
 #################################################
+import pandas as pd
+import seaborn as sns
+df = sns.load_dataset("titanic")
+print("df.head():\n",df.head())
 
+print(df.index)  # index bilgisi
+print(df[0:13])  # 0'dan 13'e kadar olan satırları gösterir.
+df.drop(0,axis=0).head()  # 0. satırı siler. axis=0 satırı gösterir. axis=1 ise sütunu gösterir.
+print(df)
+
+delete_indexes = [1,3,5,7]
+df.drop(delete_indexes,axis=0).head(10) # 1,3,5,7. satırları siler.
+
+# pandas'ta seçim işlemleri için 2 yöntem vardır.
+# 1. loc
+# 2. iloc
+
+# loc
+print("df.loc[0]:\n",df.loc[0]) # 0. index'in tüm değişkenlerini gösterir.
+print("df.loc[0, 'survived']:\n",df.loc[0, "survived"]) # 0. index'in survived değişkenini gösterir.
+print("df.loc[0:3, 'survived']:\n",df.loc[0:3, "survived"]) # 0-3. index'in survived değişkenini gösterir.
+print("df.loc[0:3, 'survived':'age']:\n",df.loc[0:3, "survived":"age"]) # 0-3. index'in survived ve age değişkenlerini gösterir.
+print("df.loc[:, 'survived']:\n",df.loc[:, "survived"]) # tüm indexlerin survived değişkenini gösterir.
+print("df.loc[:, 'survived':'age']:\n",df.loc[:, "survived":"age"]) # tüm indexlerin survived ve age değişkenlerini gösterir.
+print("df.loc[0:3, ['survived', 'age']]:\n",df.loc[0:3, ["survived", "age"]]) # 0-3. index'in survived ve age değişkenlerini gösterir.
+print("df.loc[0:3, 'survived':]:\n",df.loc[0:3, "survived":]) # 0-3. index'in survived ve sonrasındaki tüm değişkenleri gösterir.
+print("df.loc[0:3, :'age']:\n",df.loc[0:3, :"age"]) # 0-3. index'in age değişkenine kadar olan tüm değişkenleri gösterir.
+print("df.loc[0:3, 'survived'::2]:\n",df.loc[0:3, "survived"::2]) # 0-3. index'in survived değişkeninden başlayarak 2'şer 2'şer atlayarak tüm değişkenleri gösterir.
+print("df.loc[0:3, 'survived'::-1]:\n",df.loc[0:3, "survived"::-1]) # 0-3. index'in survived değişkeninden başlayarak sondan başlayarak tüm değişkenleri gösterir.
+print("df.loc[0:3, 'survived'::-2]:\n",df.loc[0:3, "survived"::-2]) # 0-3. index'in survived değişkeninden başlayarak sondan başlayarak 2'şer 2'şer atlayarak tüm değişkenleri gösterir.
+
+# iloc
+print("df.iloc[0]:\n",df.iloc[0]) # 0. index'in tüm değişkenlerini gösterir.
+print("df.iloc[0, 1]:\n",df.iloc[0, 1]) # 0. index'in 1. değişkenini gösterir.
+print("df.iloc[0:3, 1]:\n",df.iloc[0:3, 1]) # 0-3. index'in 1. değişkenini gösterir.
+print("df.iloc[0:3, 1:4]:\n",df.iloc[0:3, 1:4]) # 0-3. index'in 1-4. değişkenlerini gösterir.
+print("df.iloc[:, 1]:\n",df.iloc[:, 1]) # tüm indexlerin 1. değişkenini gösterir.
+print("df.iloc[:, 1:4]:\n",df.iloc[:, 1:4]) # tüm indexlerin 1-4. değişkenlerini gösterir.
+print("df.iloc[0:3, [1, 4]]:\n",df.iloc[0:3, [1, 4]]) # 0-3. index'in 1 ve 4. değişkenlerini gösterir.
+print("df.iloc[0:3, 1:]:\n",df.iloc[0:3, 1:]) # 0-3. index'in 1. değişkeninden başlayarak tüm değişkenleri gösterir.
+print("df.iloc[0:3, :4]:\n",df.iloc[0:3, :4]) # 0-3. index'in 4. değişkenine kadar olan tüm değişkenleri gösterir.
+print("df.iloc[0:3, 1::2]:\n",df.iloc[0:3, 1::2]) # 0-3. index'in 1. değişkeninden başlayarak 2'şer 2'şer atlayarak tüm değişkenleri gösterir.
